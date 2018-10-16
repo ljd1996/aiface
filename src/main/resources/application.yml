@@ -1,0 +1,15 @@
+mybatis:
+  # 错误:config-location: classpath:mapper/UserMapper.xml
+  mapper-locations: classpath:mapper/UserMapper.xml
+
+spring:
+#  security:
+#    user:
+#      name: hearing
+#      password: 123456
+
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/aiface?autoReconnect=true&amp;useSSL=false

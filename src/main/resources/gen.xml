@@ -1,0 +1,41 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE generatorConfiguration-->
+        <!--PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"-->
+        <!--"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">-->
+
+<!--<generatorConfiguration>-->
+    <!--&lt;!&ndash;连接数据库&ndash;&gt;-->
+    <!--<context id="DB2Tables" targetRuntime="MyBatis3">-->
+        <!--&lt;!&ndash;不生成注释&ndash;&gt;-->
+        <!--<commentGenerator>-->
+            <!--<property name="suppressAllComments" value="true"/>-->
+        <!--</commentGenerator>-->
+
+        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+                        <!--connectionURL="jdbc:mysql:///aiface?autoReconnect=true&amp;useSSL=false"-->
+                        <!--userId="root"-->
+                        <!--password="123456">-->
+        <!--</jdbcConnection>-->
+
+        <!--&lt;!&ndash;指定JavaBean的生成策略 &ndash;&gt;-->
+        <!--<javaModelGenerator targetPackage="com.hearing.aiface.bean" targetProject="./src/main/java">-->
+            <!--<property name="enableSubPackages" value="true" />-->
+            <!--<property name="trimStrings" value="true" />-->
+        <!--</javaModelGenerator>-->
+
+        <!--&lt;!&ndash;sql映射生成策略&ndash;&gt;-->
+        <!--<sqlMapGenerator targetPackage="mapper"  targetProject="./src/main/resources">-->
+            <!--<property name="enableSubPackages" value="true" />-->
+        <!--</sqlMapGenerator>-->
+
+        <!--&lt;!&ndash;指定mapper接口所在位置&ndash;&gt;-->
+        <!--<javaClientGenerator type="XMLMAPPER" targetPackage="com.hearing.aiface.dao"  targetProject="./src/main/java">-->
+            <!--<property name="enableSubPackages" value="true" />-->
+        <!--</javaClientGenerator>-->
+
+        <!--&lt;!&ndash;指定要逆向分析哪些表&ndash;&gt;-->
+        <!--<table tableName="user" domainObjectName="User" >-->
+        <!--</table>-->
+
+    <!--</context>-->
+<!--</generatorConfiguration>-->

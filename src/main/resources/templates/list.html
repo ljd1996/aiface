@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>签到表</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>项目组</th>
+    </tr>
+    <tr th:each="item,itemStat : ${list}">
+        <td th:text="${item.getId()}"></td>
+        <td th:text="${item.getName()}"></td>
+        <td th:text="${item.getGroupp()}"></td>
+    </tr>
+</table>
+</body>
+</html>
