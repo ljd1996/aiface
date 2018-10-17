@@ -4,19 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <title>签到表</title>
+    <link th:href="@{/static/bootstrap-3.3.7-dist/css/bootstrap.min.css}" rel="stylesheet">
+    <script th:src="@{/static/js/jquery1111.min.js}" type="text/javascript"></script>
+    <script th:src="@{/static/js/script.js}" type="text/javascript"></script>
 </head>
 <body>
-<table border="1">
+<h3 class="text-center" th:text="'当前签到人数:'+${list.size()}"></h3>
+
+<table class="table table-hover table-condensed">
     <tr>
-        <th>编号</th>
-        <th>姓名</th>
-        <th>项目组</th>
+        <th class="text-center">编号</th>
+        <th class="text-center">姓名</th>
+        <th class="text-center">项目组</th>
+        <th class="text-center">
+            <button id="clear" type="button" class="btn btn-danger">清空</button>
+        </th>
     </tr>
     <tr th:each="item,itemStat : ${list}">
-        <td th:text="${item.getId()}"></td>
-        <td th:text="${item.getName()}"></td>
-        <td th:text="${item.getGroupp()}"></td>
+        <td class="text-center" th:text="${item.getId()}"></td>
+        <td class="text-center" th:text="${item.getName()}"></td>
+        <td class="text-center" th:text="${item.getGroupp()}"></td>
+        <td class="text-center">
+            <button type="button" class="btn btn-primary"
+                    th:onclick="'javascript:deleteUser(\''+${item.getId()}+'\');'">
+                删除
+            </button>
+        </td>
     </tr>
 </table>
+
+<script type="text/javascript">
+    $(function () {
+        $("#clear").click(function () {
+            if (confirm("确认清空?")) {
+                $.ajax({
+                    url: "clear/",
+                    type: "GET",
+                    success: function (result) {
+                        location.reload(true)
+                    }
+                });
+            }
+        });
+    });
+
+    function deleteUser(id) {
+        $.ajax({
+            url: "delete?id="+id,
+            type: "DELETE",
+            success: function (result) {
+                location.reload(true)
+            }
+        });
+    }
+</script>
+
 </body>
 </html>

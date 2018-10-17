@@ -123,6 +123,7 @@ public class TokenUtil {
 
     /**
      * 获得我们封装在 token 中的 token 创建时间
+     *
      * @param token
      * @return
      */
@@ -139,6 +140,7 @@ public class TokenUtil {
 
     /**
      * 获得我们封装在 token 中的 token 过期时间
+     *
      * @param token
      * @return
      */
@@ -155,16 +157,21 @@ public class TokenUtil {
 
     /**
      * 检查当前时间是否在封装在 token 中的过期时间之后，若是，则判定为 token 过期
+     *
      * @param token
      * @return
      */
     private Boolean isTokenExpired(String token) {
         final Date expiration = this.getExpirationDateFromToken(token);
+        if (expiration == null) {
+            return true;
+        }
         return expiration.before(this.generateCurrentDate());
     }
 
     /**
      * 检查 token 是否是在最后一次修改密码之前创建的（账号修改密码之后之前生成的 token 即使没过期也判断为无效）
+     *
      * @param created
      * @param lastPasswordReset
      * @return

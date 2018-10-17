@@ -1,11 +1,11 @@
 mybatis:
   # 错误:config-location: classpath:mapper/UserMapper.xml
-  mapper-locations: classpath:mapper/UserMapper.xml
+  mapper-locations: classpath:mapper/*.xml
 
 token:
   secret: hearing-secret
-  expiration: 600
-  header: AiFaceTokenHeader
+  expiration: 86400 # 单位: s---86400
+  header: loginToken
 
 spring:
   mvc:
@@ -18,7 +18,7 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/aiface?autoReconnect=true&amp;useSSL=false
+    url: jdbc:mysql://localhost:3306/aiface?autoReconnect=true&useUnicode=true&characterEncoding=utf-8
 #  security:
 #    user:
 #      name: hearing

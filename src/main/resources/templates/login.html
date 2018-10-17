@@ -27,55 +27,55 @@
             <a class="hiddenanchor" id="tologin"></a>
             <div id="wrapper">
                 <div id="login" class="animate form">
-                    <form action="/login" autocomplete="on" method="post">
+                    <form action="login" autocomplete="on" method="post">
                         <h1>Log in</h1>
                         <p>
-                            <label for="username" class="uname" data-icon="u" >用户名或邮箱</label>
-                            <input id="username" name="name" required="required" type="text" placeholder="请输入用户名或邮箱"/>
+                            <label for="username" class="uname" data-icon="u" >用户名</label>
+                            <input id="username" name="name" required="required" type="text" placeholder="请输入用户名"/>
                         </p>
                         <p>
                             <label for="password" class="youpasswd" data-icon="p">密码</label>
-                            <input id="password" name="passwd" required="required" type="password" placeholder="密码" />
+                            <input id="password" name="password" required="required" type="password" placeholder="密码" />
                         </p>
-                        <p class="keeplogin">
-                            <input type="checkbox" name="loginkeeping" id="loginkeeping" value="true" />
-                            <label for="loginkeeping">记住登录状态</label>
-                        </p>
+                        <!--<p class="keeplogin">-->
+                            <!--<input type="checkbox" name="loginkeeping" id="loginkeeping" value="true" />-->
+                            <!--<label for="loginkeeping">记住登录状态</label>-->
+                        <!--</p>-->
                         <p class="login button">
-                            <a href="/hearing">取消登录</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <!--<a href="/hearing">取消登录</a>&nbsp;&nbsp;&nbsp;&nbsp;-->
                             <input type="submit" value="登录" />
                         </p>
-                        <p class="change_link">
-                            没有账号 ?
-                            <a href="#toregister" class="to_register">注册</a>
-                        </p>
+                        <!--<p class="change_link">-->
+                            <!--没有账号 ?-->
+                            <!--<a href="#toregister" class="to_register">注册</a>-->
+                        <!--</p>-->
                     </form>
                 </div>
 
-                <div id="register" class="animate form">
-                    <form  action="/register" autocomplete="on" method="post">
-                        <h1> Sign up </h1>
-                        <p>
-                            <label for="usernamesignup" class="uname" data-icon="u">用户名</label>
-                            <input id="usernamesignup" name="name" required="required" type="text" placeholder="请输入用户名（不支持中文字符）" />
-                        </p>
-                        <p>
-                            <label for="emailsignup" class="youmail" data-icon="e" >邮箱</label>
-                            <input id="emailsignup" name="email" required="required" type="email" placeholder="请输入邮箱"/>
-                        </p>
-                        <p>
-                            <label for="passwordsignup" class="youpasswd" data-icon="p">密码</label>
-                            <input id="passwordsignup" name="passwd" required="required" type="password" placeholder="请输入密码"/>
-                        </p>
-                        <p class="signin button">
-                            <a href="hearing">取消注册</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="submit" value="注册"/>
-                        </p>
-                        <p class="change_link">
-                            <a href="#tologin" class="to_register">去登陆</a>
-                        </p>
-                    </form>
-                </div>
+                <!--<div id="register" class="animate form">-->
+                    <!--<form  action="/register" autocomplete="on" method="post">-->
+                        <!--<h1> Sign up </h1>-->
+                        <!--<p>-->
+                            <!--<label for="usernamesignup" class="uname" data-icon="u">用户名</label>-->
+                            <!--<input id="usernamesignup" name="name" required="required" type="text" placeholder="请输入用户名（不支持中文字符）" />-->
+                        <!--</p>-->
+                        <!--<p>-->
+                            <!--<label for="emailsignup" class="youmail" data-icon="e" >邮箱</label>-->
+                            <!--<input id="emailsignup" name="email" required="required" type="email" placeholder="请输入邮箱"/>-->
+                        <!--</p>-->
+                        <!--<p>-->
+                            <!--<label for="passwordsignup" class="youpasswd" data-icon="p">密码</label>-->
+                            <!--<input id="passwordsignup" name="passwd" required="required" type="password" placeholder="请输入密码"/>-->
+                        <!--</p>-->
+                        <!--<p class="signin button">-->
+                            <!--<a href="hearing">取消注册</a>&nbsp;&nbsp;&nbsp;&nbsp;-->
+                            <!--<input type="submit" value="注册"/>-->
+                        <!--</p>-->
+                        <!--<p class="change_link">-->
+                            <!--<a href="#tologin" class="to_register">去登陆</a>-->
+                        <!--</p>-->
+                    <!--</form>-->
+                <!--</div>-->
 
             </div>
         </div>
